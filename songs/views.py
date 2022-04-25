@@ -13,7 +13,9 @@ def all_songs(request):
         serializer = SongSerializer(query_set, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-@api_view([])
+@api_view(['GET'])
 def single_song(request, pk):
-    if request.method == 'get':
-        return Response(status=status.HTTP_200_OK)
+    query_set = get_object_or_404(Song, pk=pk)
+    if request.method == 'GET':
+        serializer = SongSerializer(query_set)
+        return Response(serializer.data, status=status.HTTP_200_OK)
