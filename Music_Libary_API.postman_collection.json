@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "b70aa4af-25c1-409f-a58c-6bac4a0e2c15",
+		"name": "Music_Libary_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Songs",
+			"item": [
+				{
+					"name": "Get_All_Songs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/music/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Song_By_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/music/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create_Song",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Old Time Rock & Roll\",\r\n    \"artist\": \"Bob Seger\",\r\n    \"album\": \"Stranger in Town\",\r\n    \"release_date\": \"1978-01-01\",\r\n    \"genre\": \"Rock\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/music/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Song",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Old Time Rock & Roll\",\r\n    \"artist\": \"Bob Seger & The Silver Bullet Band\",\r\n    \"album\": \"Stranger in Town\",\r\n    \"release_date\": \"1978-01-01\",\r\n    \"genre\": \"Rock\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/music/2/"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Song",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/music/2"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
