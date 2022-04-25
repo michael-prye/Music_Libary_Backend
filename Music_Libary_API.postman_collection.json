@@ -70,6 +70,47 @@
 						"url": "http://127.0.0.1:8000/api/music/2"
 					},
 					"response": []
+				},
+				{
+					"name": "Add_Like",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"likes\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/music/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"music",
+								"1",
+								""
+							],
+							"query": [
+								{
+									"key": "likes",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
